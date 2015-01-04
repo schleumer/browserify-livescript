@@ -2,7 +2,7 @@ var ls = require('LiveScript');
 var through = require('through');
 
 function compile(file, data) {
-    var compiled = ls.compile(data, { bare: true });
+    var compiled = ls.compile(data, { bare: true, prelude: true });
 
     return compiled + '\n';
 }
